@@ -1,10 +1,14 @@
-// Практическая работа №5: Нахождение числа
 fun main() {
     print("Введите число: ")
-    val n = readLine()?.toIntOrNull()
+    val input = readLine() ?: return
+
+    // Преобразуем введенное значение в число
+    val n = input.toIntOrNull()
     if (n != null) {
-        println("Результат: ${n + n * 2}")
+        // Вычисляем результат
+        val result = "$n${n * 2}"
+        println("Результат: $result")
     } else {
-        println("Ошибка: Введите корректное число.")
+        println("Пожалуйста, введите корректное число.")
     }
 }
